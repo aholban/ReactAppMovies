@@ -7,7 +7,7 @@ import {store, useGlobalState} from 'state-pool';
 import YouTube from 'react-youtube';
 
 
-const restEndpoint = "http://54.90.166.125:8080/movies";
+const restEndpoint = "http://54.174.136.118:8080/movies";
 const UserContext =React.createContext();
 
 //-----------------------------------------------------------------------------------------------------------------
