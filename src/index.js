@@ -21,6 +21,7 @@ import { AiOutlinePlus} from "react-icons/ai";
 
 import {IoHome} from "react-icons/io5";
 
+import { FaPlus, FaSearch } from "react-icons/fa"
 
 
 
@@ -371,7 +372,7 @@ class NavBar extends React.Component {
               className="SearchButton"
               onClick={() => this.props.onSearchClick()}
             >
-              Search
+              <FaSearch size={18}/>
             </button>
           </Link>
         </div>
@@ -690,7 +691,7 @@ class MoviesBox extends React.Component {
             &#x25BC;
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
-            <AiOutlinePlus />
+            <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <MoviesBoxContent />}
@@ -732,7 +733,7 @@ class ActorsBox extends React.Component {
             &#x25BC;
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
-          <AiOutlinePlus />
+          <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <ActorsBoxContent />}
@@ -774,7 +775,7 @@ class GenresBox extends React.Component {
             &#x25BC;
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
-          <AiOutlinePlus />
+          <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <GenresBoxContent />}
