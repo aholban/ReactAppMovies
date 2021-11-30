@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useHistory} from 'react-router-dom';
 import {store, useGlobalState} from 'state-pool';
 import YouTube from 'react-youtube';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
@@ -674,8 +676,8 @@ class GenresBox extends React.Component{
             <div className="GenresBox">
                 <div className="Header">
                     <div className="Text">See all genres</div>
-                    <button className="Drop" onClick={()=>this.handleClickDropdown()}>&#x25BC;</button>
-                    <button className="Add" onClick={()=>this.handleAddButton()}>+</button>
+                    <Button className="Drop" variant="primary" onClick={()=>this.handleClickDropdown()}>&#x25BC;</Button>
+                    <Button className="Add" variant="primary" onClick={()=>this.handleAddButton()}>+</Button>
                     
                 </div>
                 {this.state.isDropdownPressed && (<GenresBoxContent/>)}
