@@ -14,7 +14,7 @@
 }
 
 .NavBar{
-    background-color: palegreen;
+    background-color: #191970;
     width: 98.6%;
     height: auto;
     padding: 10px;
@@ -49,14 +49,14 @@
     float: left;
     border-radius: 25px;
     border: none;
-    background-color: rgb(228, 255, 228);
+    background-color: #F0FFFF;
     padding: 5px 16px;
 }
 
 .TextBox{
     padding: 3px 5px;
     border: none;
-    background-color: rgb(228, 255, 228);
+    background-color: #F0FFFF;
 }
 
 .TextBox:focus{

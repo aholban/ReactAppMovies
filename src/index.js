@@ -13,11 +13,12 @@ import {store, useGlobalState} from 'state-pool';
 
 import YouTube from 'react-youtube';
 
-import Button from 'react-bootstrap/Button';
 
 import { Navbar, Nav } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { AiOutlinePlus } from "react-icons/ai";
+
 
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
@@ -682,12 +683,12 @@ class MoviesBox extends React.Component {
       <div className="MoviesBox">
         <div className="Header">
           <div className="Text">See all movies</div>
-          <Button className="Drop" variant = "secondary" onClick={() => this.handleClickDropdown()}>
+          <button className="Drop"  onClick={() => this.handleClickDropdown()}>
             &#x25BC;
-          </Button>
-          <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
-            +
-          </Button>
+          </button>
+          <button className="Add"  onClick={() => this.handleAddButton()}>
+            <AiOutlinePlus />
+          </button>
         </div>
         {this.state.isDropdownPressed && <MoviesBoxContent />}
         {this.state.add && <AddMoviePopUp toggle={this.handleAddButton} />}
@@ -724,12 +725,12 @@ class ActorsBox extends React.Component {
       <div className="ActorsBox">
         <div className="Header">
           <div className="Text">See all actors</div>
-          <Button className="Drop" variant = "secondary" onClick={() => this.handleClickDropdown()}>
+          <button className="Drop" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
-          </Button>
-          <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
-            +
-          </Button>
+          </button>
+          <button className="Add"  onClick={() => this.handleAddButton()}>
+          <AiOutlinePlus />
+          </button>
         </div>
         {this.state.isDropdownPressed && <ActorsBoxContent />}
         {this.state.add && <AddActorPopUp toggle={this.handleAddButton} />}
@@ -766,12 +767,12 @@ class GenresBox extends React.Component {
       <div className="GenresBox">
         <div className="Header">
           <div className="Text">See all genres</div>
-          <Button className="Drop" variant = "secondary" onClick={() => this.handleClickDropdown()}>
+          <button className="Drop"  onClick={() => this.handleClickDropdown()}>
             &#x25BC;
-          </Button>
-          <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
-            +
-          </Button>
+          </button>
+          <button className="Add"  onClick={() => this.handleAddButton()}>
+          <AiOutlinePlus />
+          </button>
         </div>
         {this.state.isDropdownPressed && <GenresBoxContent />}
         {this.state.add && <AddGenrePopUp toggle={this.handleAddButton} />}
