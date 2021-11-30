@@ -1,30 +1,24 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useParams,
-  useHistory,
-} from "react-router-dom";
-import { store, useGlobalState } from "state-pool";
-import YouTube from "react-youtube";
-=======
+
 import React, { Component } from 'react';
+
 import ReactDOM from 'react-dom';
+
 import './index.css';
+
 import { useState, useEffect } from 'react';
+
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useHistory} from 'react-router-dom';
+
 import {store, useGlobalState} from 'state-pool';
+
 import YouTube from 'react-youtube';
+
 import Button from 'react-bootstrap/Button';
+
+import { Navbar, Nav } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
->>>>>>> aeabaabebcc7641ccc03a529280ae22606b192f5
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
 //const restEndpoint = "http://127.0.0.1:8080/movies";
@@ -688,12 +682,12 @@ class MoviesBox extends React.Component {
       <div className="MoviesBox">
         <div className="Header">
           <div className="Text">See all movies</div>
-          <button className="Drop" onClick={() => this.handleClickDropdown()}>
+          <Button className="Drop" variant = "info" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
-          </button>
-          <button className="Add" onClick={() => this.handleAddButton()}>
+          </Button>
+          <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
             +
-          </button>
+          </Button>
         </div>
         {this.state.isDropdownPressed && <MoviesBoxContent />}
         {this.state.add && <AddMoviePopUp toggle={this.handleAddButton} />}
@@ -730,12 +724,12 @@ class ActorsBox extends React.Component {
       <div className="ActorsBox">
         <div className="Header">
           <div className="Text">See all actors</div>
-          <button className="Drop" onClick={() => this.handleClickDropdown()}>
+          <Button className="Drop" variant = "info" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
-          </button>
-          <button className="Add" onClick={() => this.handleAddButton()}>
+          </Button>
+          <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
             +
-          </button>
+          </Button>
         </div>
         {this.state.isDropdownPressed && <ActorsBoxContent />}
         {this.state.add && <AddActorPopUp toggle={this.handleAddButton} />}
@@ -772,12 +766,12 @@ class GenresBox extends React.Component {
       <div className="GenresBox">
         <div className="Header">
           <div className="Text">See all genres</div>
-          <button className="Drop" onClick={() => this.handleClickDropdown()}>
+          <Button className="Drop" variant = "info" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
-          </button>
-          <button className="Add" onClick={() => this.handleAddButton()}>
+          </Button>
+          <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
             +
-          </button>
+          </Button>
         </div>
         {this.state.isDropdownPressed && <GenresBoxContent />}
         {this.state.add && <AddGenrePopUp toggle={this.handleAddButton} />}

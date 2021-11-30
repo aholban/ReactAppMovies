@@ -1,7 +1,7 @@
 .Container{
     display: flex;
     flex-direction: column;
-    background-color: rgb(228, 255, 228);
+    background-color: white;
 
     position: fixed;
     overflow: auto;
@@ -77,21 +77,22 @@
     width: 90%;
     height: auto;
     padding: 10px;
-    background-color: palegoldenrod;
+    background-color: #F0FFFF;
     margin: 30px;
+    font: 30px Tahoma
 }
 
 .ActorsBox{
     width: 90%;
     padding: 10px;
-    background-color: palegoldenrod;
+    background-color: #F0FFFF;
     margin: 30px;
 }
 
 .GenresBox{
     width: 90%;
     padding: 10px;
-    background-color: palegoldenrod;
+    background-color: #F0FFFF;
     margin: 30px;
 }
 
