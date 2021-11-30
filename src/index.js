@@ -329,6 +329,33 @@ class NavBar extends React.Component {
       login: false,
       register: false,
       signout: false,
+class NavBarContainer extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            login: false,
+            register: false,
+            signout: false,
+        };
+        this.togglePopLogIn = this.togglePopLogIn.bind(this)
+        
+    }
+
+    togglePopLogIn = () => {
+        this.setState({
+         login: !this.state.login
+        });
+       };
+    togglePopRegister = () => {
+        this.setState({
+            register: !this.state.register
+        });
+    };
+    togglePopSignOut = () => {
+    
+        this.setState({
+            signout: !this.state.signout
+        });
     };
     this.togglePopLogIn = this.togglePopLogIn.bind(this);
   }
