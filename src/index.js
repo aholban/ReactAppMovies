@@ -33,6 +33,8 @@ import { FaPlus, FaSearch } from "react-icons/fa";
 
 import {MdDelete} from "react-icons/md";
 
+import {GoSignOut, GoSignIn} from "react-icons/go"
+
 
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
@@ -394,10 +396,10 @@ class NavBar extends React.Component {
           className="LoginButtons"
           onClick={() => this.togglePopSignOut()}
         >
-          Sign Out
+          Sign Out <GoSignOut/>
         </button>
         <button className="LoginButtons" onClick={() => this.togglePopLogIn()}>
-          Log In
+          Log In <GoSignIn/>
         </button>
         <button
           className="LoginButtons"
@@ -1043,7 +1045,7 @@ const FilmPage = () => {
           Delete genre
         </button>
         <button
-          className="MovieButtons"
+          className="RateButtons"
           onClick={() => rateMovie(inputRate, id)}
         >
           Rate
@@ -1067,7 +1069,7 @@ const FilmPage = () => {
           Delete actor
         </button>
         <button
-          className="MovieButtons"
+          className="RateButtons"
           onClick={() =>
             HandleAddTrailer(inputTrailer, id, user1.username, user1.password)
           }

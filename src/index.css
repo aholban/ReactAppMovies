@@ -30,6 +30,7 @@
     border-radius: 15px;
 }
 
+
 .LoginButtons:hover{
     background-color: rgb(154, 154, 209);
 }
@@ -203,6 +204,20 @@
 }
 
 .MovieLeftButtons:hover{
+    background-color: rgb(154, 154, 209);
+}
+
+.RateButtons{
+    float:right;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 5px;
+    background-color: #ADD8E6;
+    border: 2px solid rgba(139, 144, 172, 0.767);
+    padding: 3px 10px;
+}
+
+.RateButtons:hover{
     background-color: rgb(154, 154, 209);
 }
 
