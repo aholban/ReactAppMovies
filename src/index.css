@@ -150,6 +150,27 @@
     margin-right: 10px;
     height: auto;
     background-color:#F0FFFF;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.MovieItem{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background:rgba(70, 141, 168, 0.637);
+    color: white;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+
+
+.MovieItem:hover{
+    background: rgba(173, 187, 192, 0.747) ;
+    color: black;
 }
 
 .MovieTitle{
@@ -258,6 +279,8 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  
 
 
   

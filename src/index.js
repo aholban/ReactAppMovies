@@ -98,9 +98,11 @@ function RenderGenresList({ api }) {
 
 function ConvertJsonMovies(jsonMovies) {
   const arrayOfMovies = jsonMovies.map((movie) => (
-    <li>
-      <Link to={`/movie/${movie.film_id}`}>{movie.title}</Link>
-    </li>
+    <Link to={`/movie/${movie.film_id}`} style={{ textDecoration: 'none' }}>
+        <li className="MovieItem">
+            {movie.title}
+        </li>
+    </Link>
   ));
 
   return arrayOfMovies;
@@ -108,9 +110,11 @@ function ConvertJsonMovies(jsonMovies) {
 
 function ConvertJsonGenres(jsonGenres) {
   const arrayOfGenres = jsonGenres.map((genre) => (
-    <li>
-      <Link to={`/genre/${genre.genreID}`}>{genre.name}</Link>
-    </li>
+    <Link to={`/genre/${genre.genreID}`} style={{ textDecoration: 'none' }}>
+        <li className="MovieItem">
+            {genre.name}
+        </li>
+    </Link>
   ));
 
   return arrayOfGenres;
@@ -118,11 +122,11 @@ function ConvertJsonGenres(jsonGenres) {
 
 function ConvertJsonActors(jsonActors) {
   const arrayOfActors = jsonActors.map((actor) => (
-    <li>
-      <Link to={`/actor/${actor.actor_id}`}>
-        {actor.firstName} {actor.lastName}
-      </Link>
-    </li>
+    <Link to={`/actor/${actor.actor_id}`} style={{ textDecoration: 'none' }}>
+        <li className="MovieItem">
+            {actor.firstName} {actor.lastName}
+        </li>
+    </Link>
   ));
 
   return arrayOfActors;
