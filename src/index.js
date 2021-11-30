@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -12,6 +13,18 @@ import {
 } from "react-router-dom";
 import { store, useGlobalState } from "state-pool";
 import YouTube from "react-youtube";
+=======
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useParams, useHistory} from 'react-router-dom';
+import {store, useGlobalState} from 'state-pool';
+import YouTube from 'react-youtube';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+>>>>>>> aeabaabebcc7641ccc03a529280ae22606b192f5
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
 //const restEndpoint = "http://127.0.0.1:8080/movies";
