@@ -17,11 +17,13 @@ import YouTube from 'react-youtube';
 import { Navbar, Nav } from 'react-bootstrap';
 
 
-import { AiOutlinePlus} from "react-icons/ai";
+import { AiOutlinePlus, AiFillEdit} from "react-icons/ai";
 
-import {IoHome} from "react-icons/io5";
+import {IoHome, IoCaretDownOutline, IoCaretUpOutline} from "react-icons/io5";
 
-import { FaPlus, FaSearch } from "react-icons/fa"
+import { FaPlus, FaSearch } from "react-icons/fa";
+
+import {MdDelete} from "react-icons/md";
 
 
 
@@ -688,7 +690,7 @@ class MoviesBox extends React.Component {
         <div className="Header">
           <div className="Text">See all movies</div>
           <button className="Drop"  onClick={() => this.handleClickDropdown()}>
-            &#x25BC;
+            {this.state.isDropdownPressed ? <IoCaretUpOutline size={20}/> : <IoCaretDownOutline size={20}/>}
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
             <FaPlus />
@@ -730,7 +732,7 @@ class ActorsBox extends React.Component {
         <div className="Header">
           <div className="Text">See all actors</div>
           <button className="Drop" onClick={() => this.handleClickDropdown()}>
-            &#x25BC;
+            {this.state.isDropdownPressed ? <IoCaretUpOutline size={20}/> : <IoCaretDownOutline size={20}/>}
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
           <FaPlus />
@@ -772,7 +774,7 @@ class GenresBox extends React.Component {
         <div className="Header">
           <div className="Text">See all genres</div>
           <button className="Drop"  onClick={() => this.handleClickDropdown()}>
-            &#x25BC;
+            {this.state.isDropdownPressed ? <IoCaretUpOutline size={20}/> : <IoCaretDownOutline size={20}/>}
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
           <FaPlus />
@@ -1014,10 +1016,10 @@ const FilmPage = () => {
         <h1 className="MovieTitle">{movie.title}</h1>
         <div className="MovieText">({movie.length} minutes)</div>
         <Link to={`/movie/${id}/delete/`}>
-          <button className="MovieButtons">Delete</button>
+          <button className="MovieButtons"><MdDelete size={20}/></button>
         </Link>
         <button className="MovieButtons" onClick={handleUpdateButton}>
-          Update
+          <AiFillEdit size={20}/>
         </button>
       </div>
       <div className="MovieSubheader">
