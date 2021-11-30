@@ -18,6 +18,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 
 import { AiOutlinePlus } from "react-icons/ai";
+import { FaPlus } from "react-icons/fa"
 
 
 
@@ -687,7 +688,7 @@ class MoviesBox extends React.Component {
             &#x25BC;
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
-            <AiOutlinePlus />
+            <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <MoviesBoxContent />}
@@ -729,7 +730,7 @@ class ActorsBox extends React.Component {
             &#x25BC;
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
-          <AiOutlinePlus />
+          <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <ActorsBoxContent />}
@@ -771,7 +772,7 @@ class GenresBox extends React.Component {
             &#x25BC;
           </button>
           <button className="Add"  onClick={() => this.handleAddButton()}>
-          <AiOutlinePlus />
+          <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <GenresBoxContent />}
