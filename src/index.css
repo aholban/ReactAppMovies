@@ -258,15 +258,16 @@
   }
 
   .modal_content {
-    background-color: #fefefe;
+    background-color: #ADD8E6;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    font: 20px Tahoma;
   }
 
   .close {
-    color: #aaaaaa;
+    color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -274,7 +275,7 @@
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: white;
     text-decoration: none;
     cursor: pointer;
   }
