@@ -24,8 +24,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 
 
-
-import { AiOutlinePlus, AiFillEdit} from "react-icons/ai";
+import { AiOutlinePlus, AiFillEdit, AiOutlineLogin, AiOutlineLogout } from "react-icons/ai";
 
 import {IoHome, IoCaretDownOutline, IoCaretUpOutline} from "react-icons/io5";
 
@@ -394,10 +393,10 @@ class NavBar extends React.Component {
           className="LoginButtons"
           onClick={() => this.togglePopSignOut()}
         >
-          Sign Out
+         Sign Out <AiOutlineLogout />
         </button>
         <button className="LoginButtons" onClick={() => this.togglePopLogIn()}>
-          Log In
+          Log in <AiOutlineLogin />
         </button>
         <button
           className="LoginButtons"
