@@ -17,7 +17,10 @@ import YouTube from 'react-youtube';
 import { Navbar, Nav } from 'react-bootstrap';
 
 
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus} from "react-icons/ai";
+
+import {IoHome} from "react-icons/io5";
+
 
 
 
@@ -354,7 +357,7 @@ class NavBar extends React.Component {
     return (
       <div className="NavBar">
         <Link to="/home">
-          <button className="HomeButton">Home</button>
+          <button className="HomeButton"><IoHome size={20}/></button>
         </Link>
         <div className="SearchBox">
           <input
