@@ -22,7 +22,14 @@ import YouTube from "react-youtube";
 import { Navbar, Nav } from "react-bootstrap";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import { FaPlus } from "react-icons/fa";
+
+
+
+import {IoHome} from "react-icons/io5";
+
+import { FaPlus, FaSearch } from "react-icons/fa"
+
+
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
 //const restEndpoint = "http://127.0.0.1:8080/movies";
@@ -357,7 +364,7 @@ class NavBar extends React.Component {
     return (
       <div className="NavBar">
         <Link to="/home">
-          <button className="HomeButton">Home</button>
+          <button className="HomeButton"><IoHome size={20}/></button>
         </Link>
         <div className="SearchBox">
           <input
@@ -371,7 +378,7 @@ class NavBar extends React.Component {
               className="SearchButton"
               onClick={() => this.props.onSearchClick()}
             >
-              Search
+              <FaSearch size={18}/>
             </button>
           </Link>
         </div>

@@ -38,7 +38,7 @@
     border: 2px solid rgba(139, 144, 172, 0.767);
     background-color: #ADD8E6;
     float: left;
-    padding: 8px 10px;
+    padding: 4px 6px;
     margin-right: 10px;
     border-radius: 15px;
 }
@@ -57,6 +57,8 @@
 
 .TextBox{
     padding: 3px 5px;
+    font-size: 16px;
+    height: auto;
     border: none;
     background-color: #F0FFFF;
     font: 20px;
@@ -70,7 +72,7 @@
     padding: 3px 5px;
     background-color: #ADD8E6;
     border: none;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .SearchButton:hover{
