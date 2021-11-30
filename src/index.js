@@ -330,8 +330,8 @@ const SignOutPopUp = (props) => {
 class SearchMovie extends React.Component {
   render() {
     return (
-      <div>
-        <h1>List of Movies</h1>
+      <div className="MovieContent">
+        <h2 className="SearchTitle">Movies Found</h2>
         <ul>{ConvertJsonMovies(this.props.movies)}</ul>
       </div>
     );
@@ -877,7 +877,7 @@ const ActorPage = () => {
           {actor.firstName} {actor.lastName}
         </h1>
         <Link to={`/actor/${id}/delete/`}>
-          <button className="MovieButtons">Delete</button>
+          <button className="MovieButtons"><MdDelete size={20}/></button>
         </Link>
       </div>
       <h3>Movies</h3>
@@ -950,7 +950,7 @@ const GenrePage = () => {
       <div className="MovieHeader">
         <h1 className="MovieTitle">{genre.name}</h1>
         <Link to={`/genre/${id}/delete/`}>
-          <button className="MovieButtons">Delete</button>
+          <button className="MovieButtons"><MdDelete size={20}/></button>
         </Link>
       </div>
       <h3>Movies</h3>
