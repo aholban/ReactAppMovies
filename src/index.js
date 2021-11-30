@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useParams, useHistory} fr
 import {store, useGlobalState} from 'state-pool';
 import YouTube from 'react-youtube';
 import Button from 'react-bootstrap/Button';
+import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -294,7 +295,7 @@ class SearchMovie extends React.Component{
 
 //Navigation Bar
 
-class NavBar extends React.Component{
+class NavBarContainer extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -327,15 +328,20 @@ class NavBar extends React.Component{
 
     render(){
         return(
-            <div className="NavBar">
-                <Link to="/home"><button className="HomeButton">Home</button></Link>
-                <div className="SearchBox">
-                    <input className="TextBox" type="text" placeholder="Find movie..."  onChange={(e)=>this.props.onSearchChange(e.target.value)}/>
-                    <Link to="/search"><button className="SearchButton" onClick={()=>this.props.onSearchClick()}>Search</button></Link>
-                </div>
-                <button className="LoginButtons" onClick={()=>this.togglePopSignOut()}>Sign Out</button>
-                <button className="LoginButtons" onClick={()=>this.togglePopLogIn()}>Log In</button>
-                <button className="LoginButtons" onClick={()=>this.togglePopRegister()}>Register</button>
+            <div>
+                <Navbar bg="dark" variant="dark">
+                    <Link to="/home"><Button variant="primary" className="HomeButton">Home</Button></Link>
+                    <div className="SearchBox">
+                        <input className="TextBox" type="text" placeholder="Find movie..."  onChange={(e)=>this.props.onSearchChange(e.target.value)}/>
+                        <Link to="/search"><button className="SearchButton" onClick={()=>this.props.onSearchClick()}>Search</button></Link>
+                    </div>
+                    <div class="form-inline my-2 my-lg-0">
+                    <Button variant="primary" className="LoginButtons"  onClick={()=>this.togglePopSignOut()}>Sign Out</Button>
+                    <Button variant="primary" className="LoginButtons" onClick={()=>this.togglePopLogIn()}>Log In</Button>
+                    <Button variant="primary" className="LoginButtons" onClick={()=>this.togglePopRegister()}>Register</Button>
+                    </div>
+                </Navbar>
+                
                 {this.state.login ? <UpdateUserCredentials toggle={this.togglePopLogIn} /> : null}
                 {this.state.register ? <RegisterPopUp toggle={this.togglePopRegister} /> : null}
                 {this.state.signout ? <SignOutPopUp toggle={this.togglePopSignOut} /> : null}
@@ -1310,7 +1316,7 @@ class Container extends React.Component{
             <Router>
                 
                 <div className="Container">
-                    <NavBar searchInput={this.state.searchInput} onSearchChange={this.handleSearchChange} onSearchClick={this.handleSearchClick} username={this.state.username} password={this.state.password} changeCredentials={this.changeCredentials}/>
+                    <NavBarContainer searchInput={this.state.searchInput} onSearchChange={this.handleSearchChange} onSearchClick={this.handleSearchClick} username={this.state.username} password={this.state.password} changeCredentials={this.changeCredentials}/>
                         <Routes>
                             <Route exact path="/home" element={<HomeContent/>}/>
                             <Route exact path="/search" element={<SearchMovie movies={this.state.movies}/>}/>
