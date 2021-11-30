@@ -154,6 +154,7 @@
 
 .MovieTitle{
     float: left;
+    font: 30px Tahoma;
 }
 
 .MovieButtons{
@@ -161,32 +162,34 @@
     margin-top: 30px;
     margin-left: 0px;
     margin-right: 5px;
-    background-color: palegreen;
-    border: 2px solid rgb(228, 255, 228);
+    background-color: #ADD8E6;
+    border: 2px solid rgba(139, 144, 172, 0.767);
     padding: 3px 10px;
+    border-radius: 15px;
 }
 
 .MovieButtons:hover{
-    background-color: rgb(228, 255, 228);
+    background-color: rgb(154, 154, 209);
 }
 
 .MovieLeftButtons{
     float:left;
     margin-top: 30px;
     margin-left: 20px;
-    background-color: palegreen;
-    border: 2px solid rgb(228, 255, 228);
+    background-color: #ADD8E6;
+    border: 2px solid rgba(139, 144, 172, 0.767);
+    border-radius: 15px;
 }
 
 .MovieLeftButtons:hover{
-    background-color: rgb(228, 255, 228);
+    background-color: rgb(154, 154, 209);
 }
 
 .MovieText{
     float: left;
     margin-top: 32px;
     margin-left: 20px;
-    font-size: 20px;
+    font: 20px Tahoma;
 }
 
 .MovieContent{
@@ -195,8 +198,9 @@
     width: 90%;
     height: auto;
     padding: 10px;
-    background-color: palegoldenrod;
+    background-color: #F0FFFF;
     margin: 30px;
+    font: 20px Tahoma;
 }
 
 .MovieSubheader h3{
@@ -206,7 +210,7 @@
 
 .MovieSubheader p{
     float: right;
-    font-size: 20px;
+    font: 20px Tahoma;
     margin-top: 30px;
 }
 
