@@ -30,19 +30,19 @@
 }
 
 .LoginButtons:hover{
-    background-color: palegoldenrod;
+    background-color: rgb(154, 154, 209);
 }
 
 .HomeButton{
     border: 2px solid rgba(139, 144, 172, 0.767);
-    background-color: rgb(154, 154, 209);
+    background-color: #ADD8E6;
     float: left;
     padding: 8px 10px;
     margin-right: 10px;
 }
 
 .HomeButton:hover{
-    background-color: rgb(238, 170, 170);
+    background-color: rgb(154, 154, 209) ;
 }
 
 .SearchBox{
@@ -65,12 +65,12 @@
 
 .SearchButton{
     padding: 3px 5px;
-    background-color: rgb(154, 154, 209);
+    background-color: #ADD8E6;
     border: none;
 }
 
 .SearchButton:hover{
-    background-color: rgb(223, 214, 114);
+    background-color: rgb(154, 154, 209) ;
 }
 
 .MoviesBox{
