@@ -27,6 +27,7 @@
     float: right;
     text-align: center;
     padding: 8px 10px;
+    border-radius: 15px;
 }
 
 .LoginButtons:hover{
