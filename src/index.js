@@ -329,33 +329,6 @@ class NavBar extends React.Component {
       login: false,
       register: false,
       signout: false,
-class NavBarContainer extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            login: false,
-            register: false,
-            signout: false,
-        };
-        this.togglePopLogIn = this.togglePopLogIn.bind(this)
-        
-    }
-
-    togglePopLogIn = () => {
-        this.setState({
-         login: !this.state.login
-        });
-       };
-    togglePopRegister = () => {
-        this.setState({
-            register: !this.state.register
-        });
-    };
-    togglePopSignOut = () => {
-    
-        this.setState({
-            signout: !this.state.signout
-        });
     };
     this.togglePopLogIn = this.togglePopLogIn.bind(this);
   }
@@ -709,7 +682,7 @@ class MoviesBox extends React.Component {
       <div className="MoviesBox">
         <div className="Header">
           <div className="Text">See all movies</div>
-          <Button className="Drop" variant = "info" onClick={() => this.handleClickDropdown()}>
+          <Button className="Drop" variant = "secondary" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
           </Button>
           <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
@@ -751,7 +724,7 @@ class ActorsBox extends React.Component {
       <div className="ActorsBox">
         <div className="Header">
           <div className="Text">See all actors</div>
-          <Button className="Drop" variant = "info" onClick={() => this.handleClickDropdown()}>
+          <Button className="Drop" variant = "secondary" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
           </Button>
           <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>
@@ -793,7 +766,7 @@ class GenresBox extends React.Component {
       <div className="GenresBox">
         <div className="Header">
           <div className="Text">See all genres</div>
-          <Button className="Drop" variant = "info" onClick={() => this.handleClickDropdown()}>
+          <Button className="Drop" variant = "secondary" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
           </Button>
           <Button className="Add" variant = "secondary" onClick={() => this.handleAddButton()}>

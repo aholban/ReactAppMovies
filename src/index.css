@@ -85,15 +85,17 @@
 .ActorsBox{
     width: 90%;
     padding: 10px;
-    background-color: #F0FFFF;
+    background-color: #ADD8E6;
     margin: 30px;
+    font: 30px Tahoma;
 }
 
 .GenresBox{
     width: 90%;
     padding: 10px;
-    background-color: #F0FFFF;
+    background-color: #B0C4DE;
     margin: 30px;
+    font: 30px Tahoma;
 }
 
 .Header{
@@ -134,7 +136,7 @@
     margin: auto;
     margin-right: 10px;
     height: auto;
-    background-color: palegreen;
+    background-color:#F0FFFF;
 }
 
 .MovieTitle{
