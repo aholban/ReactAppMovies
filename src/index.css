@@ -40,6 +40,7 @@
     float: left;
     padding: 8px 10px;
     margin-right: 10px;
+    border-radius: 15px;
 }
 
 .HomeButton:hover{
@@ -58,6 +59,7 @@
     padding: 3px 5px;
     border: none;
     background-color: #F0FFFF;
+    font: 20px;
 }
 
 .TextBox:focus{
@@ -68,6 +70,7 @@
     padding: 3px 5px;
     background-color: #ADD8E6;
     border: none;
+    border-radius: 15px;
 }
 
 .SearchButton:hover{
@@ -81,6 +84,7 @@
     background-color: #F0FFFF;
     margin: 30px;
     font: 30px Tahoma
+    
 }
 
 .ActorsBox{
@@ -119,6 +123,7 @@
     background-color: rgba(139, 144, 172, 0.767);
     width: 40px;
     height: 40px ;
+    border-radius: 15px;
 }
 
 .Drop:hover{
@@ -131,6 +136,7 @@
     background-color: rgba(70, 141, 168, 0.637);
     width: 40px;
     height: 40px ;
+    border-radius: 15px;
 }
 
 .Add:hover{

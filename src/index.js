@@ -1,26 +1,28 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 
-import ReactDOM from 'react-dom';
+import "./index.css";
 
-import './index.css';
+import { useState, useEffect } from "react";
 
-import { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useParams,
+  useHistory,
+} from "react-router-dom";
 
-import { BrowserRouter as Router, Routes, Route, Link, useParams, useHistory} from 'react-router-dom';
+import { store, useGlobalState } from "state-pool";
 
-import {store, useGlobalState} from 'state-pool';
+import YouTube from "react-youtube";
 
-import YouTube from 'react-youtube';
-
-
-import { Navbar, Nav } from 'react-bootstrap';
-
+import { Navbar, Nav } from "react-bootstrap";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import { FaPlus } from "react-icons/fa"
-
-
+import { FaPlus } from "react-icons/fa";
 
 const restEndpoint = "http://54.197.201.50:8080/movies";
 //const restEndpoint = "http://127.0.0.1:8080/movies";
@@ -684,10 +686,10 @@ class MoviesBox extends React.Component {
       <div className="MoviesBox">
         <div className="Header">
           <div className="Text">See all movies</div>
-          <button className="Drop"  onClick={() => this.handleClickDropdown()}>
+          <button className="Drop" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
           </button>
-          <button className="Add"  onClick={() => this.handleAddButton()}>
+          <button className="Add" onClick={() => this.handleAddButton()}>
             <FaPlus />
           </button>
         </div>
@@ -729,8 +731,8 @@ class ActorsBox extends React.Component {
           <button className="Drop" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
           </button>
-          <button className="Add"  onClick={() => this.handleAddButton()}>
-          <FaPlus />
+          <button className="Add" onClick={() => this.handleAddButton()}>
+            <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <ActorsBoxContent />}
@@ -768,11 +770,11 @@ class GenresBox extends React.Component {
       <div className="GenresBox">
         <div className="Header">
           <div className="Text">See all genres</div>
-          <button className="Drop"  onClick={() => this.handleClickDropdown()}>
+          <button className="Drop" onClick={() => this.handleClickDropdown()}>
             &#x25BC;
           </button>
-          <button className="Add"  onClick={() => this.handleAddButton()}>
-          <FaPlus />
+          <button className="Add" onClick={() => this.handleAddButton()}>
+            <FaPlus />
           </button>
         </div>
         {this.state.isDropdownPressed && <GenresBoxContent />}
