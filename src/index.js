@@ -36,7 +36,7 @@ import {GoSignOut, GoSignIn} from "react-icons/go"
 
 
 
-const restEndpoint = "http://54.197.201.50:8080/movies";
+const restEndpoint = "http://35.175.247.185:8080/movies";
 //const restEndpoint = "http://127.0.0.1:8080/movies";
 const UserContext = React.createContext();
 
